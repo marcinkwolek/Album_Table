@@ -1,0 +1,127 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+    your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<script src="js/vendor/modernizr-3.5.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function () {
+        initWindow();
+    })
+</script>
+
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script src="js/albums.js"></script>
+<script src="js/photo.js"></script>
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+    window.ga = function () {
+        ga.q.push(arguments)
+    };
+    ga.q = [];
+    ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto');
+    ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+<div class="bg">
+    <div class="main">
+
+        <div class="main-board">
+            <div class="board-menu">
+                <div class="float-left">
+                    <p class="albumy">ALBUMY</p>
+                </div>
+                <p class="posty">POSTY</p>
+                <div class="float-right">
+                    <p class="close">X</p>
+                </div>
+            </div>
+
+            <div class="board-container"></div>
+
+            <div class="main-board-modal" data-modal>
+                <div class="modal-title">
+                    <span class="modal-title-text"></span>
+                    <span class="modal-add-text"></span>
+                    <span class="modal-close">X</span>
+                </div>
+
+
+                <div class="modal-wrapper">
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="bg-overlay"></div>
+
+    <div class="add-album-popup" data-modal>
+        <div class="album-popup">
+            <div class="add-album-thumb">
+                <span class="modal-close">X</span>
+            </div>
+            <form id="add-album" action="#" method="post">
+                <div class="add-album-input">
+
+                    <label> <input class="title" name="Title" type="text" placeholder="Type title here">Title</label>
+                    <label> <input class="description" name="Description" type="text" placeholder="Type description here">Description</label>
+                    <input type="submit" name="submit" value="Create Album">
+                </div>
+            </form>
+        </div>
+
+        <div class="add-photo-popup" data-modal1>
+            <div class="add-photo-thumb">
+                <span class="modal-close">X</span>
+            </div>
+            <form id="add-photo" action="#" method="post">
+                <div class="add-photo-input">
+
+                    <label> <input class="title" name="photoTitle" type="text" placeholder="Type title here">Title</label>
+                    <label> <input class="description" name="photoDescription" type="text"
+                                   placeholder="Type description here">Description</label>
+                    <input type="submit" name="photoSubmit" value="Add Photo">
+                    <input type="file" name="filename" accept="image/gif, image/jpeg, image/png" value="">
+                    <div class="photo-add"></div>
+                    <button type="button" id="end" name="end">Zakończ Edycję</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+
+
+</body>
+</html>
